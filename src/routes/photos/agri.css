@@ -1,0 +1,86 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 45px;
+  margin: 0 100px;
+}
+
+.heroo__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 450px;
+  margin-top: 150px;
+}
+
+.heroo__img img {
+  max-height: 100vh;
+  width: initial;
+}
+
+.card {
+  position: relative; /* Ensure card text is positioned correctly */
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.2); /* Slightly darker shadow for more depth */
+  padding: 0;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition for hover effect */
+  cursor: pointer; /* Make sure the cursor changes to a pointer on hover */
+  height: 310px;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover for a zoom effect */
+  box-shadow: 5px 5px 25px hsla(0, 0%, 0%, 0.3); /* Increase shadow on hover */
+}
+
+.card .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.3s ease; /* Smooth transition for any opacity change */
+}
+
+.card:hover .card-image {
+  opacity: 0.9; /* Slight fade effect on hover */
+}
+
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.orbital {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.05;
+  animation: 100s linear infinite rotateOrbital;
+  z-index: -1;
+}
+
+@keyframes rotateOrbital {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}

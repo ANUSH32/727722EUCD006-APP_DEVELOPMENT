@@ -1,0 +1,63 @@
+/* TypingQuestions.css */
+
+.typing-question {
+    margin-bottom: 20px; /* Space between questions */
+    font-size: 1em; /* Larger font size for questions */
+    margin-top: 20px;
+  }
+  
+  .typing-options {
+    list-style-type: none; 
+    padding: 0; /* Remove padding */
+  }
+  
+  .typing-options li {
+    cursor: pointer; /* Pointer cursor for options */
+    padding: 10px; /* Space inside each option */
+    margin-bottom: 10px; /* Space between options */
+    border: 1px solid #ccc; /* Border for options */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, font-weight 0.3s; /* Smooth transitions */
+  }
+  
+  .typing-options li:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+  }
+  
+  .typing-options li.selected {
+    font-weight: bold; /* Bold text for selected option */
+    background-color: rgb(119, 148, 232);
+  }
+  .orbital {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.05;
+    animation: 100s linear infinite rotateOrbital;
+    z-index: -1;
+  }
+  @keyframes rotateOrbital {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(60deg);
+    }
+  }
+  .submit-button {
+    margin-top: 20px; /* Space above the submit button */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 1em; /* Font size for the button */
+    background-color: #2e94d8; /* Button background color */
+    color: #d6d3d3; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for button */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .submit-button:disabled {
+    background-color: #ccc; /* Gray background for disabled button */
+    cursor: not-allowed; /* Not-allowed cursor for disabled button */
+  }
+  
